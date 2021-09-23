@@ -34,6 +34,9 @@ export const ReanimatedHomeScreen: FC<
   const CustomScrollViewScreen = () => navigation.navigate("CustomScrollViewScreen")
   const DoubleTapScreen = () => navigation.navigate("DoubleTapScreen")
   const PinchGesturesScreen = () => navigation.navigate("PinchGesturesScreen")
+  const PanGestureScreen = () => navigation.navigate("PanGestureScreen")
+  const SwipeToDeleteScreen = () => navigation.navigate("SwipeToDeleteScreen")
+  const TinderCloneScreen = () => navigation.navigate("TinderCloneScreen")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
@@ -50,6 +53,9 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="CUSTOM SCROLL VIEW" onPress={CustomScrollViewScreen} />
       <Button style={CONTINUE} text="DOUBLE TAP" onPress={DoubleTapScreen} />
       <Button style={CONTINUE} text="PINCH GESTURE" onPress={PinchGesturesScreen} />
+      <Button style={CONTINUE} text="PAN GESTURE" onPress={PanGestureScreen} />
+      <Button style={CONTINUE} text="SWIPE TO DELETE" onPress={SwipeToDeleteScreen} />
+      <Button style={CONTINUE} text="TINDER CLONE" onPress={TinderCloneScreen} />
     </Screen>
   )
 })

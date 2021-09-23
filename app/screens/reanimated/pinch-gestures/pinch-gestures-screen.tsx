@@ -96,7 +96,7 @@ export const PinchGesturesScreen = observer(function PinchGesturesScreen() {
       <Header
         onLeftPress={() => navigation.goBack()}
         leftIcon={"back"}
-        headerText="5. Reanimated tutorial - Pinch Gestures"
+        headerText="Reanimated Pinch Gestures"
         titleStyle={{ color: palette.black }}
         style={HEADER_ABSOLUTE}
       />
