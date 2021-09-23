@@ -13,7 +13,11 @@ import {
   CircularProgressBarScreen,
   ColorPickerScreen,
   ColorsScreen,
+  CustomScrollViewScreen,
+  DoubleTapScreen,
+  PinchGesturesScreen,
   ReanimatedHomeScreen,
+  ScrollViewScreen,
   WelcomeScreen,
 } from "../screens"
 import { navigationRef } from "./navigation-utilities"
@@ -32,11 +36,19 @@ import { navigationRef } from "./navigation-utilities"
  */
 export type NavigatorParamList = {
   WelcomeScreen: undefined
+
+  // reanimated
   ReanimatedStack: undefined
   ReanimatedHomeScreen: undefined
   CircularProgressBarScreen: undefined
   ColorPickerScreen: undefined
   ColorsScreen: undefined
+  ScrollViewScreen: undefined
+  CustomScrollViewScreen: undefined
+  DoubleTapScreen: undefined
+  PinchGesturesScreen: undefined
+
+  // animated
   AnimatedStack: undefined
   AnimatedHomeScreen: undefined
 }
@@ -56,6 +68,10 @@ const ReanimatedStack = () => {
       <Stack.Screen name="CircularProgressBarScreen" component={CircularProgressBarScreen} />
       <Stack.Screen name="ColorPickerScreen" component={ColorPickerScreen} />
       <Stack.Screen name="ColorsScreen" component={ColorsScreen} />
+      <Stack.Screen name="ScrollViewScreen" component={ScrollViewScreen} />
+      <Stack.Screen name="CustomScrollViewScreen" component={CustomScrollViewScreen} />
+      <Stack.Screen name="DoubleTapScreen" component={DoubleTapScreen} />
+      <Stack.Screen name="PinchGesturesScreen" component={PinchGesturesScreen} />
     </Stack.Navigator>
   )
 }

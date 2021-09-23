@@ -30,6 +30,10 @@ export const ReanimatedHomeScreen: FC<
   const CircularProgressBarScreen = () => navigation.navigate("CircularProgressBarScreen")
   const ColorPickerScreen = () => navigation.navigate("ColorPickerScreen")
   const ColorsScreen = () => navigation.navigate("ColorsScreen")
+  const ScrollViewScreen = () => navigation.navigate("ScrollViewScreen")
+  const CustomScrollViewScreen = () => navigation.navigate("CustomScrollViewScreen")
+  const DoubleTapScreen = () => navigation.navigate("DoubleTapScreen")
+  const PinchGesturesScreen = () => navigation.navigate("PinchGesturesScreen")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
@@ -42,6 +46,10 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="CIRCULAR PROGRESS BAR" onPress={CircularProgressBarScreen} />
       <Button style={CONTINUE} text="COLOR PICKER" onPress={ColorPickerScreen} />
       <Button style={CONTINUE} text="COLORS ON/OFF" onPress={ColorsScreen} />
+      <Button style={CONTINUE} text="SCROLL VIEW" onPress={ScrollViewScreen} />
+      <Button style={CONTINUE} text="CUSTOM SCROLL VIEW" onPress={CustomScrollViewScreen} />
+      <Button style={CONTINUE} text="DOUBLE TAP" onPress={DoubleTapScreen} />
+      <Button style={CONTINUE} text="PINCH GESTURE" onPress={PinchGesturesScreen} />
     </Screen>
   )
 })
