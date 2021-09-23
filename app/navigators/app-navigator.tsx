@@ -16,6 +16,7 @@ import {
   CustomScrollViewScreen,
   DoubleTapScreen,
   InfiniteTinderScreen,
+  LiquidSwipeScreen,
   PanGestureScreen,
   PinchGesturesScreen,
   ReanimatedHomeScreen,
@@ -55,6 +56,7 @@ export type NavigatorParamList = {
   SwipeToDeleteScreen: undefined
   TinderCloneScreen: undefined
   InfiniteTinderScreen: undefined
+  LiquidSwipeScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -84,6 +86,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="SwipeToDeleteScreen" component={SwipeToDeleteScreen} />
       <Stack.Screen name="TinderCloneScreen" component={TinderCloneScreen} />
       <Stack.Screen name="InfiniteTinderScreen" component={InfiniteTinderScreen} />
+      <Stack.Screen name="LiquidSwipeScreen" component={LiquidSwipeScreen} />
     </Stack.Navigator>
   )
 }

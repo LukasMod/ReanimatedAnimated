@@ -6,10 +6,11 @@ import { ViewStyle, SafeAreaView, View } from "react-native"
 import { faHeart, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-native-fontawesome"
 import { ProfileModel, profilesData } from "./db"
-import { Button, Text } from "../../../components"
+import { Button, Header, Text } from "../../../components"
 import { useSharedValue, withTiming } from "react-native-reanimated"
 import { RectButton } from "react-native-gesture-handler"
 import { SwipeableInfinite, SwipeInfiniteHandler } from "./swipeable-infinite"
+import { useNavigation } from "@react-navigation/core"
 
 /*
  * based on https://www.youtube.com/watch?v=vAtf1fENGDA&t=656s  (but for reanimated ver 2)
@@ -50,6 +51,8 @@ const FOOTER: ViewStyle = {
 }
 
 export const InfiniteTinderScreen = observer(function InfiniteTinderScreen() {
+  const navigation = useNavigation()
+
   const scale = useSharedValue(1)
 
   const extraProfile: ProfileModel = {
@@ -97,7 +100,7 @@ export const InfiniteTinderScreen = observer(function InfiniteTinderScreen() {
 
   return (
     <SafeAreaView style={CONTAINER}>
-      <Text text={currentIndex.toString()} style={{ color: "black" }} />
+      <Header leftIcon="back" onLeftPress={() => navigation.goBack()} />
       <Button
         text="add profile"
         onPress={() => {
