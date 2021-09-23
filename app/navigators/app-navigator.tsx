@@ -11,6 +11,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   AnimatedHomeScreen,
   CircularProgressBarScreen,
+  ColorPickerScreen,
+  ColorsScreen,
   ReanimatedHomeScreen,
   WelcomeScreen,
 } from "../screens"
@@ -33,6 +35,8 @@ export type NavigatorParamList = {
   ReanimatedStack: undefined
   ReanimatedHomeScreen: undefined
   CircularProgressBarScreen: undefined
+  ColorPickerScreen: undefined
+  ColorsScreen: undefined
   AnimatedStack: undefined
   AnimatedHomeScreen: undefined
 }
@@ -50,6 +54,8 @@ const ReanimatedStack = () => {
     >
       <Stack.Screen name="ReanimatedHomeScreen" component={ReanimatedHomeScreen} />
       <Stack.Screen name="CircularProgressBarScreen" component={CircularProgressBarScreen} />
+      <Stack.Screen name="ColorPickerScreen" component={ColorPickerScreen} />
+      <Stack.Screen name="ColorsScreen" component={ColorsScreen} />
     </Stack.Navigator>
   )
 }
