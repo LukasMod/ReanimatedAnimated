@@ -25,10 +25,10 @@ const CONTINUE: ViewStyle = {
 }
 
 export const ReanimatedHomeScreen: FC<
-  StackScreenProps<NavigatorParamList, "reanimatedHomeScreen">
+  StackScreenProps<NavigatorParamList, "ReanimatedHomeScreen">
 > = observer(({ navigation }) => {
   const onBack = () => navigation.goBack()
-  const nextScreen = () => navigation.navigate("welcome")
+  const nextScreen = () => navigation.navigate("CircularProgressBarScreen")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
@@ -38,7 +38,7 @@ export const ReanimatedHomeScreen: FC<
         leftIcon="back"
         onLeftPress={onBack}
       />
-      {/* <Button style={CONTINUE} text="REANIMATED" onPress={nextScreen} /> */}
+      <Button style={CONTINUE} text="CIRCULAR PROGRESS BAR" onPress={nextScreen} />
     </Screen>
   )
 })

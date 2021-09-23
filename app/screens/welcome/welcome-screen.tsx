@@ -24,10 +24,10 @@ const CONTINUE: ViewStyle = {
   marginVertical: spacing[2],
 }
 
-export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> = observer(
+export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "WelcomeScreen">> = observer(
   ({ navigation }) => {
-    const reanimatedHomeScreen = () => navigation.navigate("reanimatedStack")
-    const animatedHomeScreen = () => navigation.navigate("animatedStack")
+    const reanimatedHomeScreen = () => navigation.navigate("ReanimatedStack")
+    const animatedHomeScreen = () => navigation.navigate("AnimatedStack")
 
     return (
       <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>

@@ -25,10 +25,10 @@ const CONTINUE: ViewStyle = {
 }
 
 export const AnimatedHomeScreen: FC<
-  StackScreenProps<NavigatorParamList, "animatedHomeScreen">
+  StackScreenProps<NavigatorParamList, "AnimatedHomeScreen">
 > = observer(({ navigation }) => {
   const onBack = () => navigation.goBack()
-  const nextScreen = () => navigation.navigate("welcome")
+  // const nextScreen = () => navigation.navigate("welcome")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>

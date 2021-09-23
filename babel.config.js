@@ -10,6 +10,7 @@ module.exports = {
         legacy: true,
       },
     ],
-    ["@babel/plugin-proposal-optional-catch-binding"],
+    "@babel/plugin-proposal-optional-catch-binding",
+    "react-native-reanimated/plugin",
   ],
 }

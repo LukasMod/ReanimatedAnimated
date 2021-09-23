@@ -8,7 +8,12 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { AnimatedHomeScreen, ReanimatedHomeScreen, WelcomeScreen } from "../screens"
+import {
+  AnimatedHomeScreen,
+  CircularProgressBarScreen,
+  ReanimatedHomeScreen,
+  WelcomeScreen,
+} from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -24,11 +29,12 @@ import { navigationRef } from "./navigation-utilities"
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type NavigatorParamList = {
-  welcome: undefined
-  reanimatedStack: undefined
-  reanimatedHomeScreen: undefined
-  animatedStack: undefined
-  animatedHomeScreen: undefined
+  WelcomeScreen: undefined
+  ReanimatedStack: undefined
+  ReanimatedHomeScreen: undefined
+  CircularProgressBarScreen: undefined
+  AnimatedStack: undefined
+  AnimatedHomeScreen: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -40,9 +46,10 @@ const ReanimatedStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="reanimatedHomeScreen"
+      initialRouteName="ReanimatedHomeScreen"
     >
-      <Stack.Screen name="reanimatedHomeScreen" component={ReanimatedHomeScreen} />
+      <Stack.Screen name="ReanimatedHomeScreen" component={ReanimatedHomeScreen} />
+      <Stack.Screen name="CircularProgressBarScreen" component={CircularProgressBarScreen} />
     </Stack.Navigator>
   )
 }
@@ -52,9 +59,9 @@ const AnimatedStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="animatedHomeScreen"
+      initialRouteName="AnimatedHomeScreen"
     >
-      <Stack.Screen name="animatedHomeScreen" component={AnimatedHomeScreen} />
+      <Stack.Screen name="AnimatedHomeScreen" component={AnimatedHomeScreen} />
     </Stack.Navigator>
   )
 }
@@ -64,11 +71,11 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="welcome"
+      initialRouteName="WelcomeScreen"
     >
-      <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="reanimatedStack" component={ReanimatedStack} />
-      <Stack.Screen name="animatedStack" component={AnimatedStack} />
+      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+      <Stack.Screen name="ReanimatedStack" component={ReanimatedStack} />
+      <Stack.Screen name="AnimatedStack" component={AnimatedStack} />
     </Stack.Navigator>
   )
 }
@@ -99,5 +106,5 @@ AppNavigator.displayName = "AppNavigator"
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["welcome"]
+const exitRoutes = ["WelcomeScreen"]
 export const canExit = (routeName: string) => exitRoutes.includes(routeName)
