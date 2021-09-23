@@ -7,6 +7,8 @@ import { palette } from "../../../theme/palette"
 import { TinderCard } from "./tinder-card"
 import { TinderStack } from "./tinder-stack"
 
+// https://www.youtube.com/watch?v=n1o9sEiiydo
+
 const tinderCards = [
   {
     id: "1",
@@ -43,12 +45,10 @@ const tinderCards = [
 
 const ROOT: ViewStyle = {
   flex: 1,
-  backgroundColor: palette.black,
 }
 
 const CONTAINER: ViewStyle = {
   flex: 1,
-  backgroundColor: palette.black,
   justifyContent: "center",
   alignItems: "center",
 }
@@ -71,7 +71,6 @@ export const TinderCloneScreen = observer(function TinderCloneScreen(props) {
         leftIcon={"back"}
         headerText="Tinder Clone"
         titleStyle={{ color: palette.pinky }}
-        style={{ backgroundColor: palette.black }}
       />
       <View style={CONTAINER}>
         <TinderStack

@@ -12,6 +12,7 @@ export * from "./reanimated/pinch-gestures/pinch-gestures-screen"
 export * from "./reanimated/pan-gesture/pan-gesture-screen"
 export * from "./reanimated/swipe-to-delete/swipe-to-delete-screen"
 export * from "./reanimated/tinder-clone/tinder-clone-screen"
+export * from "./reanimated/infinite-tinder/infinite-tinder-screen"
 
 // animated
 export * from "./animated/animated-home-screen"

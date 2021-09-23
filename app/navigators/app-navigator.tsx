@@ -15,6 +15,7 @@ import {
   ColorsScreen,
   CustomScrollViewScreen,
   DoubleTapScreen,
+  InfiniteTinderScreen,
   PanGestureScreen,
   PinchGesturesScreen,
   ReanimatedHomeScreen,
@@ -53,6 +54,7 @@ export type NavigatorParamList = {
   PanGestureScreen: undefined
   SwipeToDeleteScreen: undefined
   TinderCloneScreen: undefined
+  InfiniteTinderScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -81,6 +83,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="PanGestureScreen" component={PanGestureScreen} />
       <Stack.Screen name="SwipeToDeleteScreen" component={SwipeToDeleteScreen} />
       <Stack.Screen name="TinderCloneScreen" component={TinderCloneScreen} />
+      <Stack.Screen name="InfiniteTinderScreen" component={InfiniteTinderScreen} />
     </Stack.Navigator>
   )
 }
