@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import { AnimatedHomeScreen, ReanimatedHomeScreen, WelcomeScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -25,13 +25,39 @@ import { navigationRef } from "./navigation-utilities"
  */
 export type NavigatorParamList = {
   welcome: undefined
-  demo: undefined
-  demoList: undefined
+  reanimatedStack: undefined
+  reanimatedHomeScreen: undefined
+  animatedStack: undefined
+  animatedHomeScreen: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator<NavigatorParamList>()
 
+const ReanimatedStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName="reanimatedHomeScreen"
+    >
+      <Stack.Screen name="reanimatedHomeScreen" component={ReanimatedHomeScreen} />
+    </Stack.Navigator>
+  )
+}
+const AnimatedStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName="animatedHomeScreen"
+    >
+      <Stack.Screen name="animatedHomeScreen" component={AnimatedHomeScreen} />
+    </Stack.Navigator>
+  )
+}
 const AppStack = () => {
   return (
     <Stack.Navigator
@@ -41,8 +67,8 @@ const AppStack = () => {
       initialRouteName="welcome"
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demo" component={DemoScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="reanimatedStack" component={ReanimatedStack} />
+      <Stack.Screen name="animatedStack" component={AnimatedStack} />
     </Stack.Navigator>
   )
 }

@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import { View, ViewStyle, TextStyle } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { Button, Header, Screen, AutoImage as Image } from "../../components"
+import { Button, Header, Screen } from "../../components"
 import { color, spacing } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
 
@@ -24,17 +24,21 @@ const CONTINUE: ViewStyle = {
   marginVertical: spacing[2],
 }
 
-export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> = observer(
-  ({ navigation }) => {
-    const reanimatedHomeScreen = () => navigation.navigate("reanimatedStack")
-    const animatedHomeScreen = () => navigation.navigate("animatedStack")
+export const ReanimatedHomeScreen: FC<
+  StackScreenProps<NavigatorParamList, "reanimatedHomeScreen">
+> = observer(({ navigation }) => {
+  const onBack = () => navigation.goBack()
+  const nextScreen = () => navigation.navigate("welcome")
 
-    return (
-      <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
-        <Header headerText="PLAYGROUND" style={HEADER} />
-        <Button style={CONTINUE} text="REANIMATED" onPress={reanimatedHomeScreen} />
-        <Button style={CONTINUE} text="ANIMATED" onPress={animatedHomeScreen} />
-      </Screen>
-    )
-  },
-)
+  return (
+    <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
+      <Header
+        headerText="REANIMATED EXAMPLES"
+        style={HEADER}
+        leftIcon="back"
+        onLeftPress={onBack}
+      />
+      {/* <Button style={CONTINUE} text="REANIMATED" onPress={nextScreen} /> */}
+    </Screen>
+  )
+})
