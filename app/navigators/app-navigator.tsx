@@ -10,6 +10,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   AnimatedHomeScreen,
+  ChessGameScreen,
   CircularProgressBarScreen,
   ColorPickerScreen,
   ColorsScreen,
@@ -57,6 +58,7 @@ export type NavigatorParamList = {
   TinderCloneScreen: undefined
   InfiniteTinderScreen: undefined
   LiquidSwipeScreen: undefined
+  ChessGameScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -87,6 +89,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="TinderCloneScreen" component={TinderCloneScreen} />
       <Stack.Screen name="InfiniteTinderScreen" component={InfiniteTinderScreen} />
       <Stack.Screen name="LiquidSwipeScreen" component={LiquidSwipeScreen} />
+      <Stack.Screen name="ChessGameScreen" component={ChessGameScreen} />
     </Stack.Navigator>
   )
 }

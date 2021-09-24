@@ -39,6 +39,7 @@ export const ReanimatedHomeScreen: FC<
   const TinderCloneScreen = () => navigation.navigate("TinderCloneScreen")
   const InfiniteTinderScreen = () => navigation.navigate("InfiniteTinderScreen")
   const LiquidSwipeScreen = () => navigation.navigate("LiquidSwipeScreen")
+  const ChessGameScreen = () => navigation.navigate("ChessGameScreen")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
@@ -60,6 +61,7 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="TINDER CLONE" onPress={TinderCloneScreen} />
       <Button style={CONTINUE} text="INFINITE TINDER" onPress={InfiniteTinderScreen} />
       <Button style={CONTINUE} text="LIQUID SWIPE" onPress={LiquidSwipeScreen} />
+      <Button style={CONTINUE} text="CHESS GAME" onPress={ChessGameScreen} />
     </Screen>
   )
 })
