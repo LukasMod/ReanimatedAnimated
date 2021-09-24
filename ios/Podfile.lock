@@ -8,6 +8,13 @@ PODS:
   - EXFileSystem (9.3.0):
     - UMCore
     - UMFileSystemInterface
+  - EXGL (9.2.0):
+    - EXGL_CPP
+    - UMCameraInterface
+    - UMCore
+    - UMFileSystemInterface
+  - EXGL_CPP (9.2.0):
+    - React-jsi
   - EXImageLoader (1.3.0):
     - React-Core
     - UMCore
@@ -415,6 +422,8 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
+  - EXGL (from `../node_modules/expo-gl/ios`)
+  - EXGL_CPP (from `../node_modules/expo-gl-cpp/cpp`)
   - EXImageLoader (from `../node_modules/expo-image-loader/ios`)
   - EXLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - EXLocalization (from `../node_modules/expo-localization/ios`)
@@ -512,6 +521,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-constants/ios"
   EXFileSystem:
     :path: "../node_modules/expo-file-system/ios"
+  EXGL:
+    :path: "../node_modules/expo-gl/ios"
+  EXGL_CPP:
+    :path: "../node_modules/expo-gl-cpp/cpp"
   EXImageLoader:
     :path: "../node_modules/expo-image-loader/ios"
   EXLinearGradient:
@@ -625,6 +638,8 @@ SPEC CHECKSUMS:
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   EXConstants: 54d0bf04319d1692c6c7bc03ca151ef7a71705a4
   EXFileSystem: 0e4974ab77bff04cda68d2886d070cbe64b93a6b
+  EXGL: aee7cdf7dab9e94d46a3701ac557163f4e82e049
+  EXGL_CPP: 0e622b8251cb739f8fcdfa9abb9944bea0452119
   EXImageLoader: f96ec9992733a4224418bbd9382e5485c8948944
   EXLinearGradient: f9ea3259f096b27008860ca50764184225dc71c9
   EXLocalization: 8b9463c81843da214476b541a27811dd885c9a76

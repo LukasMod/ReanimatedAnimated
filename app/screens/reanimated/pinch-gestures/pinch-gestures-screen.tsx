@@ -60,7 +60,6 @@ export const PinchGesturesScreen = observer(function PinchGesturesScreen() {
 
   const pinchGestureHandler = useAnimatedGestureHandler<PinchGestureHandlerGestureEvent>({
     onActive: (event) => {
-      console.log(event)
       scale.value = event.scale
       focalX.value = event.focalX
       focalY.value = event.focalY

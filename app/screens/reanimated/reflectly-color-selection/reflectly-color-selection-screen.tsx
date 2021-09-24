@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
-import { Header, Screen } from "../../../components"
+import { Header } from "../../../components"
 import { useNavigation } from "@react-navigation/native"
 import { palette } from "../../../theme/palette"
 import { Color, COLOR_WIDTH } from "./color"
@@ -13,6 +13,7 @@ import Animated, {
 } from "react-native-reanimated"
 import { snapPoint } from "react-native-redash"
 import { Background } from "./background"
+// import { BackgroundGL as Background } from "./backgroundGL"
 
 // https://www.youtube.com/watch?v=52luoBZC0Uw&list=PLkOyNuxGl9jxB_ARphTDoOWf5AE1J-x1r&index=7
 
@@ -70,7 +71,6 @@ const HEADER_STYLE: ViewStyle = {
   height: HEADER_HEIGHT,
   elevation: 2,
   zIndex: 2,
-
 }
 
 const CONTAINER: ViewStyle = {

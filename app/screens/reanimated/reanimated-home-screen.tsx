@@ -63,7 +63,11 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="INFINITE TINDER" onPress={InfiniteTinderScreen} />
       <Button style={CONTINUE} text="LIQUID SWIPE" onPress={LiquidSwipeScreen} />
       <Button style={CONTINUE} text="CHESS GAME" onPress={ChessGameScreen} />
-      <Button style={CONTINUE} text="REFLECTLY COLOR SELECTION" onPress={ReflectlyColorSelectionScreen} />
+      <Button
+        style={CONTINUE}
+        text="REFLECTLY COLOR SELECTION"
+        onPress={ReflectlyColorSelectionScreen}
+      />
     </Screen>
   )
 })

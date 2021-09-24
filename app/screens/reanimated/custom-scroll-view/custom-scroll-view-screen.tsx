@@ -59,12 +59,9 @@ export const CustomScrollViewScreen = observer(function CustomScrollViewScreen()
       cancelAnimation(translateX)
     },
     onActive: (event, context) => {
-      console.log(event.velocityX)
       translateX.value = event.translationX + context.x
     },
     onEnd: (event) => {
-      console.log(event.velocityX)
-
       translateX.value = withDecay({ velocity: event.velocityX })
     },
   })

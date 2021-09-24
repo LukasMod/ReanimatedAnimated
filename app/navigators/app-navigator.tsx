@@ -75,6 +75,7 @@ const ReanimatedStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
+        gestureEnabled: false,
       }}
       initialRouteName="ReanimatedHomeScreen"
     >
