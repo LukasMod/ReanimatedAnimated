@@ -15,6 +15,7 @@ export * from "./reanimated/tinder-clone/tinder-clone-screen"
 export * from "./reanimated/infinite-tinder/infinite-tinder-screen"
 export * from "./reanimated/liquid-swipe/liquid-swipe-screen"
 export * from "./reanimated/chess-game/chess-game-screen"
+export * from "./reanimated/reflectly-color-selection/reflectly-color-selection-screen"
 
 // animated
 export * from "./animated/animated-home-screen"
