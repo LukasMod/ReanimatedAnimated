@@ -12,8 +12,8 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated"
 import { snapPoint } from "react-native-redash"
-import { Background } from "./background"
-// import { BackgroundGL as Background } from "./backgroundGL"
+// import { Background } from "./background"
+import { BackgroundGL as Background } from "./backgroundGL"
 
 // https://www.youtube.com/watch?v=52luoBZC0Uw&list=PLkOyNuxGl9jxB_ARphTDoOWf5AE1J-x1r&index=7
 
