@@ -22,6 +22,7 @@ import {
   PinchGesturesScreen,
   ReanimatedHomeScreen,
   ReflectlyColorSelectionScreen,
+  ReflectlyTabbarScreen,
   ScrollViewScreen,
   SwipeToDeleteScreen,
   TinderCloneScreen,
@@ -61,6 +62,7 @@ export type NavigatorParamList = {
   LiquidSwipeScreen: undefined
   ChessGameScreen: undefined
   ReflectlyColorSelectionScreen: undefined
+  ReflectlyTabbarScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -97,6 +99,7 @@ const ReanimatedStack = () => {
         name="ReflectlyColorSelectionScreen"
         component={ReflectlyColorSelectionScreen}
       />
+      <Stack.Screen name="ReflectlyTabbarScreen" component={ReflectlyTabbarScreen} />
     </Stack.Navigator>
   )
 }

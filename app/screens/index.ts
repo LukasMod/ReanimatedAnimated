@@ -16,6 +16,7 @@ export * from "./reanimated/infinite-tinder/infinite-tinder-screen"
 export * from "./reanimated/liquid-swipe/liquid-swipe-screen"
 export * from "./reanimated/chess-game/chess-game-screen"
 export * from "./reanimated/reflectly-color-selection/reflectly-color-selection-screen"
+export * from "./reanimated/reflectly-tabbar/reflectly-tabbar-screen"
 
 // animated
 export * from "./animated/animated-home-screen"
