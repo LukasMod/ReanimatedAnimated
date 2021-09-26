@@ -1,14 +1,18 @@
-import React, { FC } from "react"
-import { ViewStyle, TextStyle } from "react-native"
+import React, { FC, useRef, useEffect } from "react"
+import { ViewStyle, TextStyle, ScrollView } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import { Button, Header, Screen } from "../../components"
 import { color, spacing } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
+import { useFocusEffect } from "@react-navigation/core"
+import { delay } from "../../utils/delay"
 
 const CONTAINER: ViewStyle = {
   backgroundColor: color.transparent,
   paddingHorizontal: spacing[4],
+  marginTop: 50,
+  marginBottom: 20,
 }
 const HEADER: TextStyle = {
   paddingTop: spacing[3],
@@ -43,9 +47,20 @@ export const ReanimatedHomeScreen: FC<
   const ReflectlyColorSelectionScreen = () => navigation.navigate("ReflectlyColorSelectionScreen")
   const ReflectlyTabbarScreen = () => navigation.navigate("ReflectlyTabbarScreen")
   const ChanelScrollScreen = () => navigation.navigate("ChanelScrollScreen")
+  const CoffeeScrollScreen = () => navigation.navigate("CoffeeScrollScreen")
+
+  const ref = useRef<ScrollView>()
+
+  useFocusEffect(
+    React.useCallback(() => {
+      delay(500).then(() => {
+        ref.current.scrollToEnd()
+      })
+    }, []),
+  )
 
   return (
-    <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
+    <ScrollView style={CONTAINER} ref={ref}>
       <Header
         headerText="REANIMATED EXAMPLES"
         style={HEADER}
@@ -72,6 +87,7 @@ export const ReanimatedHomeScreen: FC<
       />
       <Button style={CONTINUE} text="REFLECTLY TABBAR" onPress={ReflectlyTabbarScreen} />
       <Button style={CONTINUE} text="CHANEL SCROLL" onPress={ChanelScrollScreen} />
-    </Screen>
+      <Button style={CONTINUE} text="COFFEE SCROLL" onPress={CoffeeScrollScreen} />
+    </ScrollView>
   )
 })

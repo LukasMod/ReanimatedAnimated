@@ -13,6 +13,7 @@ import {
   ChanelScrollScreen,
   ChessGameScreen,
   CircularProgressBarScreen,
+  CoffeeScrollScreen,
   ColorPickerScreen,
   ColorsScreen,
   CustomScrollViewScreen,
@@ -65,6 +66,7 @@ export type NavigatorParamList = {
   ReflectlyColorSelectionScreen: undefined
   ReflectlyTabbarScreen: undefined
   ChanelScrollScreen: undefined
+  CoffeeScrollScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -103,6 +105,7 @@ const ReanimatedStack = () => {
       />
       <Stack.Screen name="ReflectlyTabbarScreen" component={ReflectlyTabbarScreen} />
       <Stack.Screen name="ChanelScrollScreen" component={ChanelScrollScreen} />
+      <Stack.Screen name="CoffeeScrollScreen" component={CoffeeScrollScreen} />
     </Stack.Navigator>
   )
 }
