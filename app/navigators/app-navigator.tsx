@@ -10,6 +10,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   AnimatedHomeScreen,
+  ChanelScrollScreen,
   ChessGameScreen,
   CircularProgressBarScreen,
   ColorPickerScreen,
@@ -63,6 +64,7 @@ export type NavigatorParamList = {
   ChessGameScreen: undefined
   ReflectlyColorSelectionScreen: undefined
   ReflectlyTabbarScreen: undefined
+  ChanelScrollScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -100,6 +102,7 @@ const ReanimatedStack = () => {
         component={ReflectlyColorSelectionScreen}
       />
       <Stack.Screen name="ReflectlyTabbarScreen" component={ReflectlyTabbarScreen} />
+      <Stack.Screen name="ChanelScrollScreen" component={ChanelScrollScreen} />
     </Stack.Navigator>
   )
 }

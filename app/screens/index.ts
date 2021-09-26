@@ -17,6 +17,7 @@ export * from "./reanimated/liquid-swipe/liquid-swipe-screen"
 export * from "./reanimated/chess-game/chess-game-screen"
 export * from "./reanimated/reflectly-color-selection/reflectly-color-selection-screen"
 export * from "./reanimated/reflectly-tabbar/reflectly-tabbar-screen"
+export * from "./reanimated/chanel-scroll/chanel-scroll-screen"
 
 // animated
 export * from "./animated/animated-home-screen"

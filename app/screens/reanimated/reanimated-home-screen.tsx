@@ -42,6 +42,7 @@ export const ReanimatedHomeScreen: FC<
   const ChessGameScreen = () => navigation.navigate("ChessGameScreen")
   const ReflectlyColorSelectionScreen = () => navigation.navigate("ReflectlyColorSelectionScreen")
   const ReflectlyTabbarScreen = () => navigation.navigate("ReflectlyTabbarScreen")
+  const ChanelScrollScreen = () => navigation.navigate("ChanelScrollScreen")
 
   return (
     <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
@@ -69,11 +70,8 @@ export const ReanimatedHomeScreen: FC<
         text="REFLECTLY COLOR SELECTION"
         onPress={ReflectlyColorSelectionScreen}
       />
-      <Button
-        style={CONTINUE}
-        text="REFLECTLY TABBAR"
-        onPress={ReflectlyTabbarScreen}
-      />
+      <Button style={CONTINUE} text="REFLECTLY TABBAR" onPress={ReflectlyTabbarScreen} />
+      <Button style={CONTINUE} text="CHANEL SCROLL" onPress={ChanelScrollScreen} />
     </Screen>
   )
 })
