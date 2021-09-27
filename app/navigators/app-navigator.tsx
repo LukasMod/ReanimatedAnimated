@@ -31,7 +31,10 @@ import {
   WelcomeScreen,
 } from "../screens"
 import { navigationRef } from "./navigation-utilities"
-
+import { SnapchatRoutes } from "../screens/reanimated/snapchat-shared-transitions/Model"
+import Snapchat from "../screens/reanimated/snapchat-shared-transitions/Snapchat"
+import Story from "../screens/reanimated/snapchat-shared-transitions/Story"
+import { createSharedElementStackNavigator } from "react-navigation-shared-element"
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
  * as well as what properties (if any) they might take when navigating to them.
@@ -67,6 +70,8 @@ export type NavigatorParamList = {
   ReflectlyTabbarScreen: undefined
   ChanelScrollScreen: undefined
   CoffeeScrollScreen: undefined
+  SnapchatSharedTransitionsScreen: undefined
+  Story: { story: typeof Story }
 
   // animated
   AnimatedStack: undefined
@@ -75,6 +80,29 @@ export type NavigatorParamList = {
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator<NavigatorParamList>()
+
+const StackSnapchat = createSharedElementStackNavigator<SnapchatRoutes>()
+const SnapchatNavigator = () => (
+  <StackSnapchat.Navigator
+    screenOptions={{
+      gestureEnabled: false,
+      headerShown: false,
+      cardOverlayEnabled: true,
+      cardStyle: { backgroundColor: "transparent" },
+      presentation: "modal",
+    }}
+  >
+    <StackSnapchat.Screen name="Snapchat" component={Snapchat} />
+    <StackSnapchat.Screen
+      name="Story"
+      component={Story}
+      sharedElements={(route, otherRoute, showing) => {
+        const { story } = route.params
+        return [story.id]
+      }}
+    />
+  </StackSnapchat.Navigator>
+)
 
 const ReanimatedStack = () => {
   return (
@@ -106,6 +134,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="ReflectlyTabbarScreen" component={ReflectlyTabbarScreen} />
       <Stack.Screen name="ChanelScrollScreen" component={ChanelScrollScreen} />
       <Stack.Screen name="CoffeeScrollScreen" component={CoffeeScrollScreen} />
+      <Stack.Screen name="SnapchatSharedTransitionsScreen" component={SnapchatNavigator} />
     </Stack.Navigator>
   )
 }

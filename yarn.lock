@@ -1385,10 +1385,35 @@
     xcode "^3.0.1"
     xml2js "^0.4.23"
 
+"@expo/config-plugins@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-3.1.0.tgz#0752ff33c5eab21cf42034a44e79df97f0f867f8"
+  integrity sha512-V5qxaxCAExBM0TXmbU1QKiZcAGP3ecu7KXede8vByT15cro5PkcWu2sSdJCYbHQ/gw6Vf/i8sr8gKlN8V8TSLg==
+  dependencies:
+    "@expo/config-types" "^42.0.0"
+    "@expo/json-file" "8.2.33"
+    "@expo/plist" "0.0.14"
+    chalk "^4.1.2"
+    debug "^4.3.1"
+    find-up "~5.0.0"
+    fs-extra "9.0.0"
+    getenv "^1.0.0"
+    glob "7.1.6"
+    resolve-from "^5.0.0"
+    semver "^7.3.5"
+    slash "^3.0.0"
+    xcode "^3.0.1"
+    xml2js "^0.4.23"
+
 "@expo/config-types@^40.0.0-beta.2":
   version "40.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-40.0.0-beta.2.tgz#4fea4ef5654d02218b02b0b3772529a9ce5b0471"
   integrity sha512-t9pHCQMXOP4nwd7LGXuHkLlFy0JdfknRSCAeVF4Kw2/y+5OBbR9hW9ZVnetpBf0kORrekgiI7K/qDaa3hh5+Qg==
+
+"@expo/config-types@^42.0.0":
+  version "42.0.0"
+  resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-42.0.0.tgz#3e3e125ec092c0c34dbfaf19be5480402de3d677"
+  integrity sha512-Rj02OMZke2MrGa/1Y/EScmR7VuWbDEHPJyvfFyyLbadUt+Yv6isCdeFzDt71I7gJlPR9T4fzixeYLrtXXOTq0w==
 
 "@expo/config@^3.2.3", "@expo/config@^3.3.18":
   version "3.3.43"
@@ -1451,6 +1476,15 @@
     json5 "^1.0.1"
     write-file-atomic "^2.3.0"
 
+"@expo/json-file@8.2.33":
+  version "8.2.33"
+  resolved "https://registry.yarnpkg.com/@expo/json-file/-/json-file-8.2.33.tgz#78f56f33a2cfb807b23c81e00237a33159aa1f32"
+  integrity sha512-CDnhjdirUs6OdN5hOSTJ2y3i9EiJMk7Z5iDljC5xyCHCrUex7oyI8vbRsZEojAahxZccgL/PrO+CjakiFFWurg==
+  dependencies:
+    "@babel/code-frame" "~7.10.4"
+    json5 "^1.0.1"
+    write-file-atomic "^2.3.0"
+
 "@expo/plist@0.0.13":
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@expo/plist/-/plist-0.0.13.tgz#700a48d9927aa2b0257c613e13454164e7371a96"
@@ -1459,6 +1493,15 @@
     base64-js "^1.2.3"
     xmlbuilder "^14.0.0"
     xmldom "~0.5.0"
+
+"@expo/plist@0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@expo/plist/-/plist-0.0.14.tgz#a756903bd28aabe0a961222df2e7858a39a218c9"
+  integrity sha512-bb4Ua1M/OdNgS8KiGdSDUjZ/bbPfv3xdPY/lz8Ctp/adlj/QgB8xA7tVPeqSSfJPZqFRwU0qLCnRhpUOnP51VQ==
+  dependencies:
+    "@xmldom/xmldom" "~0.7.0"
+    base64-js "^1.2.3"
+    xmlbuilder "^14.0.0"
 
 "@expo/spawn-async@1.5.0":
   version "1.5.0"
@@ -3691,6 +3734,11 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@xmldom/xmldom@~0.7.0":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.5.tgz#09fa51e356d07d0be200642b0e4f91d8e6dd408d"
+  integrity sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -5532,7 +5580,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -7510,6 +7558,14 @@ expo-asset@~8.2.1:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
+expo-av@^9.2.3:
+  version "9.2.3"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-9.2.3.tgz#aa54da9c0bc1c3eb0251c1da17f5123f15d4f82f"
+  integrity sha512-If6+JqB2mqMKJxHgN8UAx75CWH4kPAzx2EyP+MFmcPVpcSBJZ/Fj+EfI+GJnk3tHPSB2Eld1IFEYOIJCkN/26Q==
+  dependencies:
+    "@expo/config-plugins" "^3.0.0"
+    expo-modules-core "~0.2.0"
+
 expo-constants@~9.3.0:
   version "9.3.5"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.3.5.tgz#78085763e8ed100a5f2df7c682fd99631aa03d5e"
@@ -7556,6 +7612,11 @@ expo-localization@9.1.0:
   integrity sha512-0KYVUOJAHVRS/5oq0Bcf2i0imKOIFdpLnnNSG9XeaskkNgNSnbzeTQsoDvHi9UGYLwwtUo9HLciQJ/xcoSiftw==
   dependencies:
     rtl-detect "^1.0.2"
+
+expo-modules-core@~0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-0.2.0.tgz#68e5b6e53d0afbf8d131578831aed657589a2d42"
+  integrity sha512-inpfZ5X/BaTtbj2wG9PA9AC0MN8VyId6KSRlVuEg7+ziurHBy/kKDFxpOddUokhwiln2uhoYPSStJjR/tKypdw==
 
 expo-permissions@~10.0.0:
   version "10.0.0"
@@ -8860,7 +8921,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -13682,6 +13743,11 @@ react-native-screens@3.4.0:
   dependencies:
     warn-once "^0.1.0"
 
+react-native-shared-element@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/react-native-shared-element/-/react-native-shared-element-0.8.2.tgz#64124ec7e19369b78b6924c93808e1ed058c8109"
+  integrity sha512-IalCG1Sn6Vq171JMh0cbHzf0dJxwUIGwf5baxWhZ6busLQ2AL0A0pFb86sLgOUtv+NZdZX2R1Xd+Ylqj8neuLw==
+
 react-native-svg@^12.1.1:
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.1.1.tgz#5f292410b8bcc07bbc52b2da7ceb22caf5bcaaee"
@@ -13784,6 +13850,13 @@ react-native@0.64.2:
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
+
+react-navigation-shared-element@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/react-navigation-shared-element/-/react-navigation-shared-element-3.1.3.tgz#c75084ca8cab09063297a39ff1110de0dc732aab"
+  integrity sha512-U1BZp7dEdcTNHggfkq3WEBlJeg4HwFhFdj7a0i0Uql/7mg2IHQg/bZaqM2jQvJITkABge6Hz5fZixIF8jyzpkg==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
 
 react-popper-tooltip@^2.8.3:
   version "2.11.1"

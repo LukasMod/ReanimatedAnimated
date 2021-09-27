@@ -2,6 +2,9 @@ PODS:
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
+  - EXAV (9.2.3):
+    - ExpoModulesCore
+    - UMCore
   - EXConstants (9.3.5):
     - UMConstantsInterface
     - UMCore
@@ -26,6 +29,15 @@ PODS:
   - EXPermissions (10.0.0):
     - UMCore
     - UMPermissionsInterface
+  - ExpoModulesCore (0.2.0):
+    - ExpoModulesCore/Core (= 0.2.0)
+    - ExpoModulesCore/Interfaces (= 0.2.0)
+    - UMCore
+  - ExpoModulesCore/Core (0.2.0):
+    - UMCore
+  - ExpoModulesCore/Interfaces (0.2.0):
+    - ExpoModulesCore/Core
+    - UMCore
   - FBLazyVector (0.64.2)
   - FBReactNativeSpec (0.64.2):
     - RCT-Folly (= 2020.01.13.00)
@@ -393,6 +405,8 @@ PODS:
   - RNScreens (3.4.0):
     - React-Core
     - React-RCTImage
+  - RNSharedElement (0.8.2):
+    - React
   - RNSVG (12.1.1):
     - React
   - RNVectorIcons (8.1.0):
@@ -420,6 +434,7 @@ PODS:
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - EXAV (from `../node_modules/expo-av/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXGL (from `../node_modules/expo-gl/ios`)
@@ -428,6 +443,7 @@ DEPENDENCIES:
   - EXLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - EXLocalization (from `../node_modules/expo-localization/ios`)
   - EXPermissions (from `../node_modules/expo-permissions/ios`)
+  - ExpoModulesCore (from `../node_modules/expo-modules-core/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - Flipper (= 0.87.0)
@@ -482,6 +498,7 @@ DEPENDENCIES:
   - RNKeychain (from `../node_modules/react-native-keychain`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
@@ -517,6 +534,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  EXAV:
+    :path: "../node_modules/expo-av/ios"
   EXConstants:
     :path: "../node_modules/expo-constants/ios"
   EXFileSystem:
@@ -533,6 +552,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-localization/ios"
   EXPermissions:
     :path: "../node_modules/expo-permissions/ios"
+  ExpoModulesCore:
+    :path: "../node_modules/expo-modules-core/ios"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -599,6 +620,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSharedElement:
+    :path: "../node_modules/react-native-shared-element"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   RNVectorIcons:
@@ -636,6 +659,7 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
+  EXAV: 67bcc1d0afeb1fab854b206c84b9f2afbd61d0cd
   EXConstants: 54d0bf04319d1692c6c7bc03ca151ef7a71705a4
   EXFileSystem: 0e4974ab77bff04cda68d2886d070cbe64b93a6b
   EXGL: aee7cdf7dab9e94d46a3701ac557163f4e82e049
@@ -644,6 +668,7 @@ SPEC CHECKSUMS:
   EXLinearGradient: f9ea3259f096b27008860ca50764184225dc71c9
   EXLocalization: 8b9463c81843da214476b541a27811dd885c9a76
   EXPermissions: 17d4846ad1880f6891c74ae58ca1acb43e47ed47
+  ExpoModulesCore: 2734852616127a6c1fc23012197890a6f3763dc7
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
   FBReactNativeSpec: 77ecae21dd58e122017970cae516578fe453840e
   Flipper: 1bd2db48dcc31e4b167b9a33ec1df01c2ded4893
@@ -686,6 +711,7 @@ SPEC CHECKSUMS:
   RNKeychain: b8e0711b959a19c5b057d1e970d3c83d159b6da5
   RNReanimated: 241c586663f44f19a53883c63375fdd041253960
   RNScreens: 21b73c94c9117e1110a79ee0ee80c93ccefed8ce
+  RNSharedElement: 87baf6d04da5b068f000dd8c953d28a1196999c0
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
   UMAppLoader: 92d044af52626af3d81a69796ad666fc7a9a7d78

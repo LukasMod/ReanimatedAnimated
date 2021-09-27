@@ -1,8 +1,8 @@
-import React, { FC, useRef, useEffect } from "react"
+import React, { FC, useRef } from "react"
 import { ViewStyle, TextStyle, ScrollView } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { Button, Header, Screen } from "../../components"
+import { Button, Header } from "../../components"
 import { color, spacing } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
 import { useFocusEffect } from "@react-navigation/core"
@@ -48,6 +48,8 @@ export const ReanimatedHomeScreen: FC<
   const ReflectlyTabbarScreen = () => navigation.navigate("ReflectlyTabbarScreen")
   const ChanelScrollScreen = () => navigation.navigate("ChanelScrollScreen")
   const CoffeeScrollScreen = () => navigation.navigate("CoffeeScrollScreen")
+  const SnapchatSharedTransitionsScreen = () =>
+    navigation.navigate("SnapchatSharedTransitionsScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -88,6 +90,11 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="REFLECTLY TABBAR" onPress={ReflectlyTabbarScreen} />
       <Button style={CONTINUE} text="CHANEL SCROLL" onPress={ChanelScrollScreen} />
       <Button style={CONTINUE} text="COFFEE SCROLL" onPress={CoffeeScrollScreen} />
+      <Button
+        style={CONTINUE}
+        text="SNAPCHAT SHARED TRANSITIONS"
+        onPress={SnapchatSharedTransitionsScreen}
+      />
     </ScrollView>
   )
 })
