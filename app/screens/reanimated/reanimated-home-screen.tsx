@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react"
+import React, { FC, useRef, useEffect, useState } from "react"
 import { ViewStyle, TextStyle, ScrollView } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
@@ -50,16 +50,18 @@ export const ReanimatedHomeScreen: FC<
   const CoffeeScrollScreen = () => navigation.navigate("CoffeeScrollScreen")
   const SnapchatSharedTransitionsScreen = () =>
     navigation.navigate("SnapchatSharedTransitionsScreen")
+  const DuolingoScreen = () => navigation.navigate("DuolingoScreen")
 
   const ref = useRef<ScrollView>()
 
-  useFocusEffect(
-    React.useCallback(() => {
-      delay(500).then(() => {
-        ref.current.scrollToEnd()
-      })
-    }, []),
-  )
+  const [focus, setFocus] = useState(false)
+
+  useEffect(() => {
+    setFocus(navigation.isFocused())
+    if (focus) {
+      ref.current.scrollToEnd()
+    }
+  }, [navigation.isFocused, focus])
 
   return (
     <ScrollView style={CONTAINER} ref={ref}>
@@ -95,6 +97,7 @@ export const ReanimatedHomeScreen: FC<
         text="SNAPCHAT SHARED TRANSITIONS"
         onPress={SnapchatSharedTransitionsScreen}
       />
+      <Button style={CONTINUE} text="DUOLINGO" onPress={DuolingoScreen} />
     </ScrollView>
   )
 })

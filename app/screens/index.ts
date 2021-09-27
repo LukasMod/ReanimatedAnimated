@@ -19,6 +19,7 @@ export * from "./reanimated/reflectly-color-selection/reflectly-color-selection-
 export * from "./reanimated/reflectly-tabbar/reflectly-tabbar-screen"
 export * from "./reanimated/chanel-scroll/chanel-scroll-screen"
 export * from "./reanimated/coffee-scroll/coffee-scroll-screen"
+export * from "./reanimated/duolingo/duolingo-screen"
 
 // animated
 export * from "./animated/animated-home-screen"
