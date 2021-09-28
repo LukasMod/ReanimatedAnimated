@@ -39,7 +39,7 @@ const textColors = {
   menu: "#2d9cdb",
 }
 
-const BACKGROUND_COLOR = "red"
+const BACKGROUND_COLOR = "white"
 
 function Tab({ label, accessibilityState, onPress }) {
   const focused = accessibilityState.selected
