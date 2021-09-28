@@ -22,6 +22,8 @@ export * from "./reanimated/coffee-scroll/coffee-scroll-screen"
 export * from "./reanimated/duolingo/duolingo-screen"
 export * from "./reanimated/chrome-drag/chrome-drag-screen"
 export * from "./reanimated/stars/stars-screen"
+export * from "./reanimated/measures/measures-screen"
+
 
 // animated
 export * from "./animated/animated-home-screen"

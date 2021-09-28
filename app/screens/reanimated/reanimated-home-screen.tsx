@@ -51,6 +51,8 @@ export const ReanimatedHomeScreen: FC<
   const DuolingoScreen = () => navigation.navigate("DuolingoScreen")
   const ChromeDragScreen = () => navigation.navigate("ChromeDragScreen")
   const StarsScreen = () => navigation.navigate("StarsScreen")
+  const MeasuresScreen = () => navigation.navigate("MeasuresScreen")
+  const BubbleTabbarScreen = () => navigation.navigate("BubbleTabbarScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -100,6 +102,8 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="DUOLINGO" onPress={DuolingoScreen} />
       <Button style={CONTINUE} text="CHROME DRAG TO SORT" onPress={ChromeDragScreen} />
       <Button style={CONTINUE} text="STARS" onPress={StarsScreen} />
+      <Button style={CONTINUE} text="MEASURES" onPress={MeasuresScreen} />
+      <Button style={CONTINUE} text="BUBBLE TABBAR" onPress={BubbleTabbarScreen} />
     </ScrollView>
   )
 })

@@ -5,11 +5,12 @@
  * and a "main" flow which the user will use once logged in.
  */
 import React from "react"
-import { useColorScheme } from "react-native"
+import { TouchableOpacity, useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   AnimatedHomeScreen,
+  BubbleTabbarScreen,
   ChanelScrollScreen,
   ChessGameScreen,
   ChromeDragScreen,
@@ -22,6 +23,7 @@ import {
   DuolingoScreen,
   InfiniteTinderScreen,
   LiquidSwipeScreen,
+  MeasuresScreen,
   PanGestureScreen,
   PinchGesturesScreen,
   ReanimatedHomeScreen,
@@ -38,6 +40,14 @@ import { SnapchatRoutes } from "../screens/reanimated/snapchat-shared-transition
 import Snapchat from "../screens/reanimated/snapchat-shared-transitions/Snapchat"
 import Story from "../screens/reanimated/snapchat-shared-transitions/Story"
 import { createSharedElementStackNavigator } from "react-navigation-shared-element"
+import TabComponent from "../screens/reanimated/bubble-tabbar/components/Tab"
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import BubbleTabHome from "../screens/reanimated/bubble-tabbar/screens/Home"
+import BubbleTabDocuments from "../screens/reanimated/bubble-tabbar/screens/Documents"
+import BubbleTabLogger from "../screens/reanimated/bubble-tabbar/screens/Logger"
+import BubbleTabMenu from "../screens/reanimated/bubble-tabbar/screens/Menu"
+import { Icon } from "../components"
+
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
  * as well as what properties (if any) they might take when navigating to them.
@@ -78,6 +88,13 @@ export type NavigatorParamList = {
   DuolingoScreen: undefined
   ChromeDragScreen: undefined
   StarsScreen: undefined
+  MeasuresScreen: undefined
+  BubbleTabbarScreen: undefined
+
+  BubbleTabHome: undefined
+  BubbleTabLogger: undefined
+  BubbleTabDocuments: undefined
+  BubbleTabMenu: undefined
 
   // animated
   AnimatedStack: undefined
@@ -109,6 +126,54 @@ const SnapchatNavigator = () => (
     />
   </StackSnapchat.Navigator>
 )
+
+const BubbleTab = createBottomTabNavigator()
+
+const BubbleTabStack = () => {
+  return (
+    <BubbleTab.Navigator
+      initialRouteName="Home"
+      screenOptions={(route) => ({
+        headerLeft: ({}) => {
+          return (
+            <TouchableOpacity onPress={() => route.navigation.goBack()}>
+              <Icon icon="back" />
+            </TouchableOpacity>
+          )
+        },
+      })}
+    >
+      <BubbleTab.Screen
+        name="Home"
+        component={BubbleTabHome}
+        options={{
+          tabBarButton: (props) => <TabComponent label="home" {...props} />,
+        }}
+      />
+      <BubbleTab.Screen
+        name="Logger"
+        component={BubbleTabLogger}
+        options={{
+          tabBarButton: (props) => <TabComponent label="logger" {...props} />,
+        }}
+      />
+      <BubbleTab.Screen
+        name="Documents"
+        component={BubbleTabDocuments}
+        options={{
+          tabBarButton: (props) => <TabComponent label="documents" {...props} />,
+        }}
+      />
+      <BubbleTab.Screen
+        name="Menu"
+        component={BubbleTabMenu}
+        options={{
+          tabBarButton: (props) => <TabComponent label="menu" {...props} />,
+        }}
+      />
+    </BubbleTab.Navigator>
+  )
+}
 
 const ReanimatedStack = () => {
   return (
@@ -144,6 +209,8 @@ const ReanimatedStack = () => {
       <Stack.Screen name="DuolingoScreen" component={DuolingoScreen} />
       <Stack.Screen name="ChromeDragScreen" component={ChromeDragScreen} />
       <Stack.Screen name="StarsScreen" component={StarsScreen} />
+      <Stack.Screen name="MeasuresScreen" component={MeasuresScreen} />
+      <Stack.Screen name="BubbleTabbarScreen" component={BubbleTabStack} />
     </Stack.Navigator>
   )
 }

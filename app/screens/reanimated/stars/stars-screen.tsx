@@ -33,14 +33,10 @@ export const StarsScreen = observer(function StarsScreen() {
   useEffect(() => {
     timeVal.value = 0
     timeVal.value = withRepeat(
-      withTiming(
-        duration,
-        {
-          duration: 2000 * duration,
-          easing: Easing.linear,
-        },
-        () => console.log(timeVal.value),
-      ),
+      withTiming(duration, {
+        duration: 2000 * duration,
+        easing: Easing.linear,
+      }),
       0,
       false,
     )
