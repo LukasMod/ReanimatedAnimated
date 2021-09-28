@@ -12,6 +12,7 @@ import {
   AnimatedHomeScreen,
   ChanelScrollScreen,
   ChessGameScreen,
+  ChromeDragScreen,
   CircularProgressBarScreen,
   CoffeeScrollScreen,
   ColorPickerScreen,
@@ -73,7 +74,8 @@ export type NavigatorParamList = {
   CoffeeScrollScreen: undefined
   SnapchatSharedTransitionsScreen: undefined
   Story: { story: typeof Story }
-  DuolingoScreen: { story: typeof Story }
+  DuolingoScreen: undefined
+  ChromeDragScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -138,6 +140,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="CoffeeScrollScreen" component={CoffeeScrollScreen} />
       <Stack.Screen name="SnapchatSharedTransitionsScreen" component={SnapchatNavigator} />
       <Stack.Screen name="DuolingoScreen" component={DuolingoScreen} />
+      <Stack.Screen name="ChromeDragScreen" component={ChromeDragScreen} />
     </Stack.Navigator>
   )
 }

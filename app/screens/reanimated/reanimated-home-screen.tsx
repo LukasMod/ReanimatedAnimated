@@ -5,8 +5,6 @@ import { observer } from "mobx-react-lite"
 import { Button, Header } from "../../components"
 import { color, spacing } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
-import { useFocusEffect } from "@react-navigation/core"
-import { delay } from "../../utils/delay"
 
 const CONTAINER: ViewStyle = {
   backgroundColor: color.transparent,
@@ -51,6 +49,7 @@ export const ReanimatedHomeScreen: FC<
   const SnapchatSharedTransitionsScreen = () =>
     navigation.navigate("SnapchatSharedTransitionsScreen")
   const DuolingoScreen = () => navigation.navigate("DuolingoScreen")
+  const ChromeDragScreen = () => navigation.navigate("ChromeDragScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -98,6 +97,7 @@ export const ReanimatedHomeScreen: FC<
         onPress={SnapchatSharedTransitionsScreen}
       />
       <Button style={CONTINUE} text="DUOLINGO" onPress={DuolingoScreen} />
+      <Button style={CONTINUE} text="CHROME DRAG TO SORT" onPress={ChromeDragScreen} />
     </ScrollView>
   )
 })
