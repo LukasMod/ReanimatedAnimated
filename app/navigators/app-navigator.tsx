@@ -28,6 +28,7 @@ import {
   ReflectlyColorSelectionScreen,
   ReflectlyTabbarScreen,
   ScrollViewScreen,
+  StarsScreen,
   SwipeToDeleteScreen,
   TinderCloneScreen,
   WelcomeScreen,
@@ -76,6 +77,7 @@ export type NavigatorParamList = {
   Story: { story: typeof Story }
   DuolingoScreen: undefined
   ChromeDragScreen: undefined
+  StarsScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -141,6 +143,7 @@ const ReanimatedStack = () => {
       <Stack.Screen name="SnapchatSharedTransitionsScreen" component={SnapchatNavigator} />
       <Stack.Screen name="DuolingoScreen" component={DuolingoScreen} />
       <Stack.Screen name="ChromeDragScreen" component={ChromeDragScreen} />
+      <Stack.Screen name="StarsScreen" component={StarsScreen} />
     </Stack.Navigator>
   )
 }

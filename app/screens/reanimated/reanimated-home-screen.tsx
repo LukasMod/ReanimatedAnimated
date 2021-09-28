@@ -50,6 +50,7 @@ export const ReanimatedHomeScreen: FC<
     navigation.navigate("SnapchatSharedTransitionsScreen")
   const DuolingoScreen = () => navigation.navigate("DuolingoScreen")
   const ChromeDragScreen = () => navigation.navigate("ChromeDragScreen")
+  const StarsScreen = () => navigation.navigate("StarsScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -98,6 +99,7 @@ export const ReanimatedHomeScreen: FC<
       />
       <Button style={CONTINUE} text="DUOLINGO" onPress={DuolingoScreen} />
       <Button style={CONTINUE} text="CHROME DRAG TO SORT" onPress={ChromeDragScreen} />
+      <Button style={CONTINUE} text="STARS" onPress={StarsScreen} />
     </ScrollView>
   )
 })
