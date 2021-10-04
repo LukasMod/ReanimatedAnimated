@@ -67,7 +67,6 @@ export const InfiniteTinderScreen = observer(function InfiniteTinderScreen() {
 
   const [swipedCardsArray, setSwipedCardsArray] = useState([])
   const [leftCardsArray, setLeftCardsArray] = useState(profiles)
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   const extraRightOffset = useSharedValue(0)
 
@@ -87,10 +86,6 @@ export const InfiniteTinderScreen = observer(function InfiniteTinderScreen() {
       setSwipedCardsArray([])
       extraRightOffset.value = withTiming(0)
     }
-    const realProfilesIndex = profiles.findIndex(
-      (item) => item.id === leftCardsArray[leftCardsArray.length - 1].id,
-    )
-    setCurrentIndex(profiles.length - realProfilesIndex)
   }, [leftCardsArray])
 
   useEffect(() => {

@@ -40,6 +40,7 @@ export const ReanimatedHomeScreen: FC<
   const SwipeToDeleteScreen = () => navigation.navigate("SwipeToDeleteScreen")
   const TinderCloneScreen = () => navigation.navigate("TinderCloneScreen")
   const InfiniteTinderScreen = () => navigation.navigate("InfiniteTinderScreen")
+  const InfiniteTinderScreen2 = () => navigation.navigate("InfiniteTinderScreen2")
   const LiquidSwipeScreen = () => navigation.navigate("LiquidSwipeScreen")
   const ChessGameScreen = () => navigation.navigate("ChessGameScreen")
   const ReflectlyColorSelectionScreen = () => navigation.navigate("ReflectlyColorSelectionScreen")
@@ -84,6 +85,7 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="SWIPE TO DELETE" onPress={SwipeToDeleteScreen} />
       <Button style={CONTINUE} text="TINDER CLONE" onPress={TinderCloneScreen} />
       <Button style={CONTINUE} text="INFINITE TINDER" onPress={InfiniteTinderScreen} />
+      <Button style={CONTINUE} text="INFINITE TINDER2" onPress={InfiniteTinderScreen2} />
       <Button style={CONTINUE} text="LIQUID SWIPE" onPress={LiquidSwipeScreen} />
       <Button style={CONTINUE} text="CHESS GAME" onPress={ChessGameScreen} />
       <Button
