@@ -47,6 +47,7 @@ import BubbleTabDocuments from "../screens/reanimated/bubble-tabbar/screens/Docu
 import BubbleTabLogger from "../screens/reanimated/bubble-tabbar/screens/Logger"
 import BubbleTabMenu from "../screens/reanimated/bubble-tabbar/screens/Menu"
 import { Icon } from "../components"
+import { CircularProgressBarGradientScreen } from "../screens/reanimated/circular-progress-bar-gradient-screen/circular-progress-bar-gradient-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -96,6 +97,7 @@ export type NavigatorParamList = {
   BubbleTabLogger: undefined
   BubbleTabDocuments: undefined
   BubbleTabMenu: undefined
+  CircularProgressBarGradientScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -213,6 +215,10 @@ const ReanimatedStack = () => {
       <Stack.Screen name="StarsScreen" component={StarsScreen} />
       <Stack.Screen name="MeasuresScreen" component={MeasuresScreen} />
       <Stack.Screen name="BubbleTabbarScreen" component={BubbleTabStack} />
+      <Stack.Screen
+        name="CircularProgressBarGradientScreen"
+        component={CircularProgressBarGradientScreen}
+      />
     </Stack.Navigator>
   )
 }

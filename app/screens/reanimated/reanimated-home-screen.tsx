@@ -54,6 +54,7 @@ export const ReanimatedHomeScreen: FC<
   const StarsScreen = () => navigation.navigate("StarsScreen")
   const MeasuresScreen = () => navigation.navigate("MeasuresScreen")
   const BubbleTabbarScreen = () => navigation.navigate("BubbleTabbarScreen")
+  const CircularProgressBarGradientScreen = () => navigation.navigate("CircularProgressBarGradientScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -106,6 +107,7 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="STARS" onPress={StarsScreen} />
       <Button style={CONTINUE} text="MEASURES" onPress={MeasuresScreen} />
       <Button style={CONTINUE} text="BUBBLE TABBAR" onPress={BubbleTabbarScreen} />
+      <Button style={CONTINUE} text="CIRCULAR PROGRESS GRADIENT" onPress={CircularProgressBarGradientScreen} />
     </ScrollView>
   )
 })
