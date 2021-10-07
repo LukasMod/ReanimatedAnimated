@@ -48,6 +48,8 @@ import BubbleTabLogger from "../screens/reanimated/bubble-tabbar/screens/Logger"
 import BubbleTabMenu from "../screens/reanimated/bubble-tabbar/screens/Menu"
 import { Icon } from "../components"
 import { CircularProgressBarGradientScreen } from "../screens/reanimated/circular-progress-bar-gradient-screen/circular-progress-bar-gradient-screen"
+import { GoogleMapsScreen } from "../screens/reanimated/google-maps/google-maps-screen"
+import { MapItemsScreen } from "../screens/reanimated/map-items/map-items-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -98,6 +100,8 @@ export type NavigatorParamList = {
   BubbleTabDocuments: undefined
   BubbleTabMenu: undefined
   CircularProgressBarGradientScreen: undefined
+  GoogleMapsScreen: undefined
+  MapItemsScreen: undefined
 
   // animated
   AnimatedStack: undefined
@@ -219,6 +223,8 @@ const ReanimatedStack = () => {
         name="CircularProgressBarGradientScreen"
         component={CircularProgressBarGradientScreen}
       />
+      <Stack.Screen name="GoogleMapsScreen" component={GoogleMapsScreen} />
+      <Stack.Screen name="MapItemsScreen" component={MapItemsScreen} />
     </Stack.Navigator>
   )
 }

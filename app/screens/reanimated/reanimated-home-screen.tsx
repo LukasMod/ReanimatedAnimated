@@ -54,7 +54,10 @@ export const ReanimatedHomeScreen: FC<
   const StarsScreen = () => navigation.navigate("StarsScreen")
   const MeasuresScreen = () => navigation.navigate("MeasuresScreen")
   const BubbleTabbarScreen = () => navigation.navigate("BubbleTabbarScreen")
-  const CircularProgressBarGradientScreen = () => navigation.navigate("CircularProgressBarGradientScreen")
+  const CircularProgressBarGradientScreen = () =>
+    navigation.navigate("CircularProgressBarGradientScreen")
+  const GoogleMapsScreen = () => navigation.navigate("GoogleMapsScreen")
+  const MapItemsScreen = () => navigation.navigate("MapItemsScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -107,7 +110,13 @@ export const ReanimatedHomeScreen: FC<
       <Button style={CONTINUE} text="STARS" onPress={StarsScreen} />
       <Button style={CONTINUE} text="MEASURES" onPress={MeasuresScreen} />
       <Button style={CONTINUE} text="BUBBLE TABBAR" onPress={BubbleTabbarScreen} />
-      <Button style={CONTINUE} text="CIRCULAR PROGRESS GRADIENT" onPress={CircularProgressBarGradientScreen} />
+      <Button
+        style={CONTINUE}
+        text="CIRCULAR PROGRESS GRADIENT"
+        onPress={CircularProgressBarGradientScreen}
+      />
+      <Button style={CONTINUE} text="GOOGLE MAPS" onPress={GoogleMapsScreen} />
+      <Button style={CONTINUE} text="MAP ITEMS" onPress={MapItemsScreen} />
     </ScrollView>
   )
 })
