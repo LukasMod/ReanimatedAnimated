@@ -50,6 +50,8 @@ import { Icon } from "../components"
 import { CircularProgressBarGradientScreen } from "../screens/reanimated/circular-progress-bar-gradient-screen/circular-progress-bar-gradient-screen"
 import { GoogleMapsScreen } from "../screens/reanimated/google-maps/google-maps-screen"
 import { MapItemsScreen } from "../screens/reanimated/map-items/map-items-screen"
+import { ComponentsHomeScreen } from "../screens/components/components-home-screen"
+import { AccordionScreen } from "../screens/components/accordion/accordion-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -106,6 +108,11 @@ export type NavigatorParamList = {
   // animated
   AnimatedStack: undefined
   AnimatedHomeScreen: undefined
+
+  // components
+  ComponentsStack: undefined
+  ComponentsHomeScreen: undefined
+  AccordionScreen: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -240,6 +247,19 @@ const AnimatedStack = () => {
     </Stack.Navigator>
   )
 }
+const ComponentsStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName="ComponentsHomeScreen"
+    >
+      <Stack.Screen name="ComponentsHomeScreen" component={ComponentsHomeScreen} />
+      <Stack.Screen name="AccordionScreen" component={AccordionScreen} />
+    </Stack.Navigator>
+  )
+}
 const AppStack = () => {
   return (
     <Stack.Navigator
@@ -251,6 +271,7 @@ const AppStack = () => {
       <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
       <Stack.Screen name="ReanimatedStack" component={ReanimatedStack} />
       <Stack.Screen name="AnimatedStack" component={AnimatedStack} />
+      <Stack.Screen name="ComponentsStack" component={ComponentsStack} />
     </Stack.Navigator>
   )
 }

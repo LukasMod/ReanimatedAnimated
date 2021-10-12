@@ -28,12 +28,14 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "WelcomeScre
   ({ navigation }) => {
     const reanimatedHomeScreen = () => navigation.navigate("ReanimatedStack")
     const animatedHomeScreen = () => navigation.navigate("AnimatedStack")
+    const componentsHomeScreen = () => navigation.navigate("ComponentsStack")
 
     return (
       <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
         <Header headerText="PLAYGROUND" style={HEADER} />
         <Button style={CONTINUE} text="REANIMATED" onPress={reanimatedHomeScreen} />
         <Button style={CONTINUE} text="ANIMATED" onPress={animatedHomeScreen} />
+        <Button style={CONTINUE} text="COMPONENTS" onPress={componentsHomeScreen} />
       </Screen>
     )
   },

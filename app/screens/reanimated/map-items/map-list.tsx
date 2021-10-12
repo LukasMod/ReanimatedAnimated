@@ -56,7 +56,7 @@ export default function MapList(props) {
         decelerationRate={0.9}
         removeClippedSubviews={false}
         enableMomentum={true}
-        panY={panY}
+        // panY={panY}
         scrollEnabled={!isGestureActive}
         onSnapToItem={(index) => {
           setCurrentOffer(index)
