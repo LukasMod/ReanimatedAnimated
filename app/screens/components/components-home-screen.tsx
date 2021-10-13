@@ -30,6 +30,8 @@ export const ComponentsHomeScreen: FC<
 > = observer(({ navigation }) => {
   const onBack = () => navigation.goBack()
   const AccordionScreen = () => navigation.navigate("AccordionScreen")
+  const PincodeScreen = () => navigation.navigate("PincodeScreen")
+  const AuthenticationScreen = () => navigation.navigate("AuthenticationScreen")
 
   const ref = useRef<ScrollView>()
 
@@ -51,6 +53,8 @@ export const ComponentsHomeScreen: FC<
         onLeftPress={onBack}
       />
       <Button style={CONTINUE} text="ACCORDION" onPress={AccordionScreen} />
+      <Button style={CONTINUE} text="PINCODE" onPress={PincodeScreen} />
+      <Button style={CONTINUE} text="AUTHENTICATION" onPress={AuthenticationScreen} />
     </ScrollView>
   )
 })

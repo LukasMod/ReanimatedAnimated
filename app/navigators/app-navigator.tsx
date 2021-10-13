@@ -52,6 +52,8 @@ import { GoogleMapsScreen } from "../screens/reanimated/google-maps/google-maps-
 import { MapItemsScreen } from "../screens/reanimated/map-items/map-items-screen"
 import { ComponentsHomeScreen } from "../screens/components/components-home-screen"
 import { AccordionScreen } from "../screens/components/accordion/accordion-screen"
+import { PincodeScreen } from "../screens/components/pincode/pincode-screen"
+import { AuthenticationScreen } from "../screens/components/authentication/authentication-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -113,6 +115,8 @@ export type NavigatorParamList = {
   ComponentsStack: undefined
   ComponentsHomeScreen: undefined
   AccordionScreen: undefined
+  PincodeScreen: undefined
+  AuthenticationScreen: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -257,6 +261,8 @@ const ComponentsStack = () => {
     >
       <Stack.Screen name="ComponentsHomeScreen" component={ComponentsHomeScreen} />
       <Stack.Screen name="AccordionScreen" component={AccordionScreen} />
+      <Stack.Screen name="PincodeScreen" component={PincodeScreen} />
+      <Stack.Screen name="AuthenticationScreen" component={AuthenticationScreen} />
     </Stack.Navigator>
   )
 }

@@ -24,6 +24,8 @@ PODS:
     - UMImageLoaderInterface
   - EXLinearGradient (9.2.0):
     - UMCore
+  - EXLocalAuthentication (11.1.1):
+    - UMCore
   - EXLocalization (9.1.0):
     - UMCore
   - EXPermissions (10.0.0):
@@ -299,6 +301,8 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
+  - react-native-biometrics (2.1.4):
+    - React
   - react-native-maps (0.29.3):
     - React-Core
   - react-native-safe-area-context (3.1.8):
@@ -445,6 +449,7 @@ DEPENDENCIES:
   - EXGL_CPP (from `../node_modules/expo-gl-cpp/cpp`)
   - EXImageLoader (from `../node_modules/expo-image-loader/ios`)
   - EXLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
+  - EXLocalAuthentication (from `../node_modules/expo-local-authentication/ios`)
   - EXLocalization (from `../node_modules/expo-localization/ios`)
   - EXPermissions (from `../node_modules/expo-permissions/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core/ios`)
@@ -483,6 +488,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-biometrics (from `../node_modules/react-native-biometrics`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -554,6 +560,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-image-loader/ios"
   EXLinearGradient:
     :path: "../node_modules/expo-linear-gradient/ios"
+  EXLocalAuthentication:
+    :path: "../node_modules/expo-local-authentication/ios"
   EXLocalization:
     :path: "../node_modules/expo-localization/ios"
   EXPermissions:
@@ -588,6 +596,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-biometrics:
+    :path: "../node_modules/react-native-biometrics"
   react-native-maps:
     :path: "../node_modules/react-native-maps"
   react-native-safe-area-context:
@@ -676,6 +686,7 @@ SPEC CHECKSUMS:
   EXGL_CPP: 0e622b8251cb739f8fcdfa9abb9944bea0452119
   EXImageLoader: f96ec9992733a4224418bbd9382e5485c8948944
   EXLinearGradient: f9ea3259f096b27008860ca50764184225dc71c9
+  EXLocalAuthentication: 88a1a69ea66c4934387d1eb503628170c853caef
   EXLocalization: 8b9463c81843da214476b541a27811dd885c9a76
   EXPermissions: 17d4846ad1880f6891c74ae58ca1acb43e47ed47
   ExpoModulesCore: 2734852616127a6c1fc23012197890a6f3763dc7
@@ -702,6 +713,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
+  react-native-biometrics: 9d3306e5d29c3bc4e6a3c912d759a94e76a2f683
   react-native-maps: 41d01d8e0afcebe32bec9eea3bd945adc1b18f7a
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-webview: 133a6a5149f963259646e710b4545c67ef35d7c9
